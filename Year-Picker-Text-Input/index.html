@@ -22,6 +22,8 @@
 margin: 1rem 0rem;
 }
 </style>
+    
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -47,11 +49,16 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
     <div class="container">
         <div class="title">
-            <h1>YearPicker - Basic Year Picker Plugin Example</h1>
+            <h1>Chinese Zodiac</h1>
         </div>
         <div class="main">
             <h2>Select Year</h2>
-            <input type="text" class="yearpicker form-control" value="" />
+            <input id="year" type="text" class="yearpicker form-control" value="" />
+        </div>
+        <div>
+            <h2 id="yinyang"></h2>
+            <h2 id="element"></h2>
+            <h1 id="animal"></h1>
         </div>
     </div>
     <script src="dist/yearpicker.js"></script>
