@@ -108,9 +108,12 @@ function updateChineseZodiac() {
     // Yin-Yang
     yinyang.textContent = yearValue % 2 === 0 ? "Yang" : "Yin";
 
-    // Five Elements (Cycle repeats every 10 years, using mod 10)
+    // Calculate the index based on the sexagenary cycle starting at year 4
+    let stemIndex = (yearValue - 4) % 10;
+    if (stemIndex < 0) stemIndex += 10; // ensure a positive index for years before 4
+
     const elements = ["Wood", "Wood", "Fire", "Fire", "Earth", "Earth", "Metal", "Metal", "Water", "Water"];
-    element.textContent = elements[yearValue % 10];
+    element.textContent = elements[stemIndex];
 
     // Zodiac Animal (Cycle repeats every 12 years, using mod 12)
     const animals = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"];
